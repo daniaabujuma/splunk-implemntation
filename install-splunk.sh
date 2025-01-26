@@ -57,6 +57,9 @@ if [[ $splunk_role == "HF" ]]; then
 
     # Create outputs.conf
     cat <<EOF > /opt/splunk/etc/apps/all-hf-base/local/outputs.conf
+[indexAndForward]
+index = false
+
 [tcpout]
 defaultGroup = default-autolb-group
 
